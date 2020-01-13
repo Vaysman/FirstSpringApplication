@@ -1,16 +1,13 @@
 package task.manager.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
+
+@Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class TaskDataModel {
-	String dateEvent;
-	
-	public void setDateEvent(String dateEvent) {
-		this.dateEvent = dateEvent;
-	}
-	public String getDateEvent() {
-		return dateEvent;
-	}
-	@Override
-	public String toString() {
-		return "TaskDataModel [dateEvent=" + dateEvent + "]";
-	}
+	@JsonProperty
+    String dateEvent;
 }
